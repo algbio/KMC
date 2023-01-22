@@ -11,8 +11,8 @@ set(KMC_CLI_DIR "${CMAKE_CURRENT_SOURCE_DIR}/kmc_CLI")
 set(KMC_API_DIR "${CMAKE_CURRENT_SOURCE_DIR}/kmc_api")
 set(KMC_TOOLS_DIR "${CMAKE_CURRENT_SOURCE_DIR}/kmc_tools")
 
-find_library(KMC_ZLIB z PATHS ${CMAKE_SOURCE_DIR}/KMC/kmc_tools/libs REQUIRED)
-find_library(KMC_BZIP2 bz2 PATHS ${CMAKE_SOURCE_DIR}/KMC/kmc_tools/libs REQUIRED)
+find_library(KMC_ZLIB z PATHS ${CMAKE_CURRENT_SOURCE_DIR}/kmc_tools/libs REQUIRED)
+find_library(KMC_BZIP2 bz2 PATHS ${CMAKE_CURRENT_SOURCE_DIR}/kmc_tools/libs REQUIRED)
 
 if(APPLE)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -m64 -static-libgcc -static-libstdc++ -pthread -std=c++14")
